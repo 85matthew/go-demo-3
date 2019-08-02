@@ -141,7 +141,8 @@ func PersonServer(w http.ResponseWriter, req *http.Request) {
 }
 
 var prometheusHandler = func() http.Handler {
-	return prometheus.Handler()
+	#return prometheus.Handler()
+        return promhttp.Handler
 }
 
 var findPeople = func(res *[]Person) error {
