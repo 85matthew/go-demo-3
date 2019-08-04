@@ -14,14 +14,14 @@ kind: Pod
 spec:
   containers:
   - name: helm
-    image: vfarcic/helm:2.9.1
+    image: 85matthew/helm:2.14.1
     command: ["cat"]
     tty: true
     volumeMounts:
     - name: build-config
       mountPath: /etc/config
   - name: kubectl
-    image: vfarcic/kubectl
+    image: 85matthew/kubectl:1.13.2
     command: ["cat"]
     tty: true
   - name: golang
